@@ -25,7 +25,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eiY-ku-HNr">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onBoardingImage" translatesAutoresizingMaskIntoConstraints="NO" id="eiY-ku-HNr">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="06s-jL-6FA">
@@ -214,6 +214,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="onBoardingImage" width="375" height="667"/>
         <image name="placeHoldImage6" width="2560" height="1600"/>
         <image name="share-email" width="90" height="90"/>
         <image name="share-facebook" width="90" height="90"/>

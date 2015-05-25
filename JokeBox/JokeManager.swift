@@ -45,7 +45,7 @@ class JokeManager: NSObject {
     }
     
     func getManyRandomJoke() {
-        let numberOfJoke: Int = 50
+        let numberOfJoke: Int = 30
         let url = "http://api.icndb.com/jokes/random/\(numberOfJoke)"
         var jokes = [Joke]()
         var req = Alamofire.request(.GET, url).responseJSON { (_, response, JSON, error) in

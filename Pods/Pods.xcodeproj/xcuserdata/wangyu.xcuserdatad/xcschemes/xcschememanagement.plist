@@ -9,11 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Haneke.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-MWFeedParser.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,32 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>18C3EF0C0F624FF35C5FF57C</key>
+		<key>4676213F454ECAD3F980A3B2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>81AED127DD42D211F3EA1351</key>
+		<key>4CDE86859B18F5E1C6E57EC9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C09327FCFEE7077D1CFDED3D</key>
+		<key>8DA88922BEB507C7BE48E8EE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C638D0335314E6D1776F34B2</key>
+		<key>B52279832881AC12C5BF95A5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CBB52965A6ACF382B43BB76C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FBCE3687AEA7A67CE9EC4D6F</key>
+		<key>CE69E359BD453B20811E89F4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

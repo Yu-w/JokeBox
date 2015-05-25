@@ -12,12 +12,6 @@
 #define COCOAPODS_VERSION_MINOR_Alamofire 2
 #define COCOAPODS_VERSION_PATCH_Alamofire 2
 
-// Haneke
-#define COCOAPODS_POD_AVAILABLE_Haneke
-#define COCOAPODS_VERSION_MAJOR_Haneke 1
-#define COCOAPODS_VERSION_MINOR_Haneke 0
-#define COCOAPODS_VERSION_PATCH_Haneke 1
-
 // MWFeedParser
 #define COCOAPODS_POD_AVAILABLE_MWFeedParser
 #define COCOAPODS_VERSION_MAJOR_MWFeedParser 1

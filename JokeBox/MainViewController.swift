@@ -35,21 +35,13 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
     var jokeMgr: JokeManager = JokeManager()
     var imageUrls = [String]() {
         didSet {
-            for var index = 0; index < imageUrls.count-1; index++ {
-                dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.value), 0)) {
+            dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.value), 0)) {
+                for var index = 0; index < self.imageUrls.count-1; index++ {
                     let imageData = NSData(contentsOfURL: NSURL(string: self.imageUrls[index])!)
                     dispatch_async(dispatch_get_main_queue()) {
                         if imageData != nil {
-                            var hasIdenticalImage: Bool = false
-                            let curImage: UIImage = UIImage(data: imageData!)!
-                            for image in self.images {
-                                if image.size == curImage.size {
-                                    hasIdenticalImage = true
-                                }
-                            }
-                            if hasIdenticalImage == false {
+                                let curImage: UIImage = UIImage(data: imageData!)!
                                 self.images.append(curImage)
-                            }
                         }
                     }
                 }
@@ -83,6 +75,8 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
         animator = UIDynamicAnimator(referenceView: view)
         
         dialogView.alpha = 0
+        imageView.contentMode = UIViewContentMode.ScaleAspectFill
+
         jokeLabel.numberOfLines = 0
         jokeLabel.text = ""
         jokeLabel.adjustsFontSizeToFitWidth = true
@@ -93,6 +87,7 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
     }
     
     override func viewDidAppear(animated: Bool) {
+        println(images)
         super.viewDidAppear(Bool())
         jokeLabel.text = ""
         if !jokes.isEmpty {
@@ -115,10 +110,10 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
         dialogView.alpha = 1
         
         if !images.isEmpty {
+            var oldImageSize = CGSize()
             let currentImage = images.removeAtIndex(0)
             fadeChangeBackgroundImage(currentImage)
             imageView.image = currentImage
-            imageView.contentMode = UIViewContentMode.ScaleAspectFill
         } else {
             setCurrentImageAsRandomImageInPlaceHolder()
         }
