@@ -23,6 +23,7 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
     @IBOutlet weak var twitterButton: UIButton!
     @IBOutlet weak var facebookButton: UIButton!
     @IBOutlet weak var shareLabelsView: UIView!
+    @IBOutlet weak var shareButton: UIView!
     @IBOutlet weak var jokeLabelActivityIndicator: UIActivityIndicatorView!
     
     var placeHolderImageIndex: Int {
@@ -87,7 +88,6 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
     }
     
     override func viewDidAppear(animated: Bool) {
-        println(images)
         super.viewDidAppear(Bool())
         jokeLabel.text = ""
         if !jokes.isEmpty {
@@ -157,32 +157,33 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
         }
     }
 
-//    @IBAction func shareButtonDidPress(sender: AnyObject) {
-//        shareView.hidden = false
-//        showMask()
-//        shareView.transform = CGAffineTransformMakeTranslation(0, 200)
-//        emailButton.transform = CGAffineTransformMakeTranslation(0, 200)
-//        twitterButton.transform = CGAffineTransformMakeTranslation(0, 200)
-//        facebookButton.transform = CGAffineTransformMakeTranslation(0, 200)
-//        shareLabelsView.alpha = 0
-//        
-//        spring(0.5) {
-//            self.shareView.transform = CGAffineTransformMakeTranslation(0, 0)
-//            self.dialogView.transform = CGAffineTransformMakeScale(0.8, 0.8)
-//        }
-//        springWithDelay(0.5, 0.05, {
-//            self.emailButton.transform = CGAffineTransformMakeTranslation(0, 0)
-//        })
-//        springWithDelay(0.5, 0.10, {
-//            self.twitterButton.transform = CGAffineTransformMakeTranslation(0, 0)
-//        })
-//        springWithDelay(0.5, 0.15, {
-//            self.facebookButton.transform = CGAffineTransformMakeTranslation(0, 0)
-//        })
-//        springWithDelay(0.5, 0.2, {
-//            self.shareLabelsView.alpha = 1
-//        })
-//    }
+    @IBAction func shareButtonDidPress(sender: AnyObject) {
+        shareView.hidden = false
+        showMask()
+        shareView.transform = CGAffineTransformMakeTranslation(0, 200)
+        emailButton.transform = CGAffineTransformMakeTranslation(0, 200)
+        twitterButton.transform = CGAffineTransformMakeTranslation(0, 200)
+        facebookButton.transform = CGAffineTransformMakeTranslation(0, 200)
+        shareLabelsView.alpha = 0
+        
+        spring(0.5) {
+            self.shareView.transform = CGAffineTransformMakeTranslation(0, 0)
+            self.dialogView.transform = CGAffineTransformMakeScale(0.8, 0.8)
+        }
+        springWithDelay(0.5, 0.05, {
+            self.emailButton.transform = CGAffineTransformMakeTranslation(0, 0)
+        })
+        springWithDelay(0.5, 0.10, {
+            self.twitterButton.transform = CGAffineTransformMakeTranslation(0, 0)
+        })
+        springWithDelay(0.5, 0.15, {
+            self.facebookButton.transform = CGAffineTransformMakeTranslation(0, 0)
+        })
+        springWithDelay(0.5, 0.2, {
+            self.shareLabelsView.alpha = 1
+        })
+    }
+
     func hideShareView() {
         spring(0.5) {
             self.shareView.transform = CGAffineTransformMakeTranslation(0, 0)

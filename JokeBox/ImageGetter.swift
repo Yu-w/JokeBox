@@ -18,7 +18,7 @@ class ImageGetter: NSObject {
    
     struct apiInfo {
         let key = "1fcf2cd093b0b761335437cc367cf051"
-        let apiSecret = "596f14d5648dc4ad"
+        let secret = "596f14d5648dc4ad"
     }
     
     weak var delegate: ImageGetterDelegate?
@@ -42,7 +42,6 @@ class ImageGetter: NSObject {
                     let serverId = data["photos"]["photo"][i]["server"]
                     let url = "https://farm\(farmId).staticflickr.com/\(serverId)/\(id)_\(secret).jpg"
                     urlList.append(url)
-                    println(url)
                 }
                 self.delegate?.gotFlickrInterestingnessPhotoUrls!(urlList)
             }
