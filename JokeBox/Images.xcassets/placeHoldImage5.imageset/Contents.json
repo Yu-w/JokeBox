@@ -1,12 +1,9 @@
 {
   "images" : [
     {
-      "idiom" : "universal"
-    },
-    {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "image4.png"
+      "filename" : "placeHoldImage5.jpg"
     },
     {
       "idiom" : "universal",

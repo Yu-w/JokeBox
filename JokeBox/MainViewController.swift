@@ -11,11 +11,11 @@ import Spring
 
 class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDelegate {
 
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var backgroundMaskView: UIView!
     @IBOutlet weak var dialogView: UIView!
     @IBOutlet weak var shareView: UIView!
-    @IBOutlet weak var imageButton: UIButton!
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var jokeLabel: SpringLabel!
     @IBOutlet weak var maskButton: UIButton!
@@ -25,6 +25,12 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
     @IBOutlet weak var shareLabelsView: UIView!
     @IBOutlet weak var jokeLabelActivityIndicator: UIActivityIndicatorView!
     
+    var placeHolderImageIndex: Int {
+        get {
+            let random: Int = Int(rand() % 11)
+            return random
+        }
+    }
     var imageGetter: ImageGetter = ImageGetter()
     var jokeMgr: JokeManager = JokeManager()
     var imageUrls = [String]() {
@@ -71,11 +77,8 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
         jokeLabel.text = ""
         jokeLabel.adjustsFontSizeToFitWidth = true
         jokeLabelActivityIndicator.hidesWhenStopped = true
-        
-        delay(10, { () -> () in
-            println(self.images)
-            println(self.images.count)
-        })
+
+        setCurrentImageAsRandomImageInPlaceHolder()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -98,8 +101,17 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
         if !images.isEmpty {
             let currentImage = images.removeAtIndex(0)
             backgroundImageView.image = currentImage
-            imageButton.setImage(currentImage, forState: UIControlState.Normal)
+            imageView.image = currentImage
+            imageView.contentMode = UIViewContentMode.ScaleAspectFill
+        } else {
+            setCurrentImageAsRandomImageInPlaceHolder()
         }
+    }
+    
+    func setCurrentImageAsRandomImageInPlaceHolder() {
+        let currentImage: UIImage? = UIImage(named: "placeHoldImage\(placeHolderImageIndex)")
+        backgroundImageView.image = currentImage
+        imageView.image = currentImage
     }
 
     func gotOneRandomJoke(joke: Joke) {
@@ -110,7 +122,6 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
     }
     
     func gotFlickrInterestingnessPhotoUrls(urlList: [String]) {
-        println(urlList)
         imageUrls = urlList
     }
     
@@ -217,7 +228,7 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
         snapBehavior = UISnapBehavior(item: dialogView, snapToPoint: CGPoint(x: view.center.x, y: view.center.y - 45))
         attachmentBehavior.anchorPoint = CGPoint(x: view.center.x, y: view.center.y - 45)
         
-        dialogView.center = view.center
+        dialogView.center = CGPoint(x: view.center.x, y: view.center.y - 45)
         viewDidAppear(true)
     }
     
