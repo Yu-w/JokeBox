@@ -1,0 +1,510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		888A96781B12CA80005297E1 /* ImageGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888A96771B12CA80005297E1 /* ImageGetter.swift */; };
+		888A967A1B12E63D005297E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 888A96791B12E63D005297E1 /* Main.storyboard */; };
+		889E21AD1B11EEE30069552C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889E21AC1B11EEE30069552C /* AppDelegate.swift */; };
+		889E21AF1B11EEE30069552C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889E21AE1B11EEE30069552C /* MainViewController.swift */; };
+		889E21B41B11EEE30069552C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 889E21B31B11EEE30069552C /* Images.xcassets */; };
+		889E21B71B11EEE30069552C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 889E21B51B11EEE30069552C /* LaunchScreen.xib */; };
+		889E21C31B11EEE30069552C /* JokeBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889E21C21B11EEE30069552C /* JokeBoxTests.swift */; };
+		889E21CD1B11FA190069552C /* JokeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889E21CC1B11FA190069552C /* JokeManager.swift */; };
+		EE69AFFA480DDEEEAB06A193 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D01DB2C9D061576840126FB5 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		889E21BD1B11EEE30069552C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 889E219F1B11EEE30069552C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 889E21A61B11EEE30069552C;
+			remoteInfo = JokeBox;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4A6D9AEDB12B4BA9981F0591 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		578416305A53ED9F828B63CA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		888A96721B120508005297E1 /* JokeBox-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JokeBox-Bridging-Header.h"; sourceTree = "<group>"; };
+		888A96771B12CA80005297E1 /* ImageGetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGetter.swift; sourceTree = "<group>"; };
+		888A96791B12E63D005297E1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		889E21A71B11EEE30069552C /* JokeBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JokeBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		889E21AB1B11EEE30069552C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		889E21AC1B11EEE30069552C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		889E21AE1B11EEE30069552C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		889E21B31B11EEE30069552C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		889E21B61B11EEE30069552C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		889E21BC1B11EEE30069552C /* JokeBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JokeBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		889E21C11B11EEE30069552C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		889E21C21B11EEE30069552C /* JokeBoxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeBoxTests.swift; sourceTree = "<group>"; };
+		889E21CC1B11FA190069552C /* JokeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokeManager.swift; sourceTree = "<group>"; };
+		D01DB2C9D061576840126FB5 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		889E21A41B11EEE30069552C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE69AFFA480DDEEEAB06A193 /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		889E21B91B11EEE30069552C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		889E219E1B11EEE30069552C = {
+			isa = PBXGroup;
+			children = (
+				889E21A91B11EEE30069552C /* JokeBox */,
+				889E21BF1B11EEE30069552C /* JokeBoxTests */,
+				889E21A81B11EEE30069552C /* Products */,
+				97D78957FFC3C8F8CEF5764F /* Pods */,
+				E19A39FFFE70C570FDE5159C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		889E21A81B11EEE30069552C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				889E21A71B11EEE30069552C /* JokeBox.app */,
+				889E21BC1B11EEE30069552C /* JokeBoxTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		889E21A91B11EEE30069552C /* JokeBox */ = {
+			isa = PBXGroup;
+			children = (
+				889E21AC1B11EEE30069552C /* AppDelegate.swift */,
+				889E21AE1B11EEE30069552C /* MainViewController.swift */,
+				889E21CC1B11FA190069552C /* JokeManager.swift */,
+				888A96771B12CA80005297E1 /* ImageGetter.swift */,
+				888A96791B12E63D005297E1 /* Main.storyboard */,
+				889E21AA1B11EEE30069552C /* Supporting Files */,
+			);
+			path = JokeBox;
+			sourceTree = "<group>";
+		};
+		889E21AA1B11EEE30069552C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				889E21B31B11EEE30069552C /* Images.xcassets */,
+				889E21B51B11EEE30069552C /* LaunchScreen.xib */,
+				889E21AB1B11EEE30069552C /* Info.plist */,
+				888A96721B120508005297E1 /* JokeBox-Bridging-Header.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		889E21BF1B11EEE30069552C /* JokeBoxTests */ = {
+			isa = PBXGroup;
+			children = (
+				889E21C21B11EEE30069552C /* JokeBoxTests.swift */,
+				889E21C01B11EEE30069552C /* Supporting Files */,
+			);
+			path = JokeBoxTests;
+			sourceTree = "<group>";
+		};
+		889E21C01B11EEE30069552C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				889E21C11B11EEE30069552C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		97D78957FFC3C8F8CEF5764F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4A6D9AEDB12B4BA9981F0591 /* Pods.debug.xcconfig */,
+				578416305A53ED9F828B63CA /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E19A39FFFE70C570FDE5159C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D01DB2C9D061576840126FB5 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		889E21A61B11EEE30069552C /* JokeBox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 889E21C61B11EEE30069552C /* Build configuration list for PBXNativeTarget "JokeBox" */;
+			buildPhases = (
+				11A7998E0B3DD11552B22D82 /* Check Pods Manifest.lock */,
+				889E21A31B11EEE30069552C /* Sources */,
+				889E21A41B11EEE30069552C /* Frameworks */,
+				889E21A51B11EEE30069552C /* Resources */,
+				0C6FC0D09176D325E2AEF4D4 /* Embed Pods Frameworks */,
+				8593AD91B4187927F07813AE /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JokeBox;
+			productName = JokeBox;
+			productReference = 889E21A71B11EEE30069552C /* JokeBox.app */;
+			productType = "com.apple.product-type.application";
+		};
+		889E21BB1B11EEE30069552C /* JokeBoxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 889E21C91B11EEE30069552C /* Build configuration list for PBXNativeTarget "JokeBoxTests" */;
+			buildPhases = (
+				889E21B81B11EEE30069552C /* Sources */,
+				889E21B91B11EEE30069552C /* Frameworks */,
+				889E21BA1B11EEE30069552C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				889E21BE1B11EEE30069552C /* PBXTargetDependency */,
+			);
+			name = JokeBoxTests;
+			productName = JokeBoxTests;
+			productReference = 889E21BC1B11EEE30069552C /* JokeBoxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		889E219F1B11EEE30069552C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Yu Wang";
+				TargetAttributes = {
+					889E21A61B11EEE30069552C = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					889E21BB1B11EEE30069552C = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 889E21A61B11EEE30069552C;
+					};
+				};
+			};
+			buildConfigurationList = 889E21A21B11EEE30069552C /* Build configuration list for PBXProject "JokeBox" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 889E219E1B11EEE30069552C;
+			productRefGroup = 889E21A81B11EEE30069552C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				889E21A61B11EEE30069552C /* JokeBox */,
+				889E21BB1B11EEE30069552C /* JokeBoxTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		889E21A51B11EEE30069552C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				889E21B71B11EEE30069552C /* LaunchScreen.xib in Resources */,
+				889E21B41B11EEE30069552C /* Images.xcassets in Resources */,
+				888A967A1B12E63D005297E1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		889E21BA1B11EEE30069552C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C6FC0D09176D325E2AEF4D4 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		11A7998E0B3DD11552B22D82 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8593AD91B4187927F07813AE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		889E21A31B11EEE30069552C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				889E21AF1B11EEE30069552C /* MainViewController.swift in Sources */,
+				889E21CD1B11FA190069552C /* JokeManager.swift in Sources */,
+				888A96781B12CA80005297E1 /* ImageGetter.swift in Sources */,
+				889E21AD1B11EEE30069552C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		889E21B81B11EEE30069552C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				889E21C31B11EEE30069552C /* JokeBoxTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		889E21BE1B11EEE30069552C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 889E21A61B11EEE30069552C /* JokeBox */;
+			targetProxy = 889E21BD1B11EEE30069552C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		889E21B51B11EEE30069552C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				889E21B61B11EEE30069552C /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		889E21C41B11EEE30069552C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		889E21C51B11EEE30069552C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		889E21C71B11EEE30069552C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A6D9AEDB12B4BA9981F0591 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = JokeBox/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JokeBox/JokeBox-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		889E21C81B11EEE30069552C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 578416305A53ED9F828B63CA /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = JokeBox/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JokeBox/JokeBox-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		889E21CA1B11EEE30069552C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = JokeBoxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JokeBox.app/JokeBox";
+			};
+			name = Debug;
+		};
+		889E21CB1B11EEE30069552C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = JokeBoxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JokeBox.app/JokeBox";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		889E21A21B11EEE30069552C /* Build configuration list for PBXProject "JokeBox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				889E21C41B11EEE30069552C /* Debug */,
+				889E21C51B11EEE30069552C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		889E21C61B11EEE30069552C /* Build configuration list for PBXNativeTarget "JokeBox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				889E21C71B11EEE30069552C /* Debug */,
+				889E21C81B11EEE30069552C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		889E21C91B11EEE30069552C /* Build configuration list for PBXNativeTarget "JokeBoxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				889E21CA1B11EEE30069552C /* Debug */,
+				889E21CB1B11EEE30069552C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 889E219F1B11EEE30069552C /* Project object */;
+}
