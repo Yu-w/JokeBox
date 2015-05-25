@@ -12,4 +12,4 @@ Get API from website listed below:
 2.Internet Chunk Norris Database: http://www.icndb.com/api/
 
 
-#### Animation part credit to @MengTo
+*Animation part credit to @MengTo*
