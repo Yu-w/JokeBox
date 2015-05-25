@@ -36,7 +36,6 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
     var imageUrls = [String]() {
         didSet {
             for var index = 0; index < imageUrls.count-1; index++ {
-                println(imageUrls[index])
                 dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.value), 0)) {
                     let imageData = NSData(contentsOfURL: NSURL(string: self.imageUrls[index])!)
                     dispatch_async(dispatch_get_main_queue()) {
@@ -77,8 +76,6 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
         jokeLabel.text = ""
         jokeLabel.adjustsFontSizeToFitWidth = true
         jokeLabelActivityIndicator.hidesWhenStopped = true
-
-        setCurrentImageAsRandomImageInPlaceHolder()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -100,7 +97,7 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
         
         if !images.isEmpty {
             let currentImage = images.removeAtIndex(0)
-            backgroundImageView.image = currentImage
+            fadeChangeBackgroundImage(currentImage)
             imageView.image = currentImage
             imageView.contentMode = UIViewContentMode.ScaleAspectFill
         } else {
@@ -110,7 +107,7 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
     
     func setCurrentImageAsRandomImageInPlaceHolder() {
         let currentImage: UIImage? = UIImage(named: "placeHoldImage\(placeHolderImageIndex)")
-        backgroundImageView.image = currentImage
+        fadeChangeBackgroundImage(currentImage!)
         imageView.image = currentImage
     }
 
@@ -230,6 +227,12 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
         
         dialogView.center = CGPoint(x: view.center.x, y: view.center.y - 45)
         viewDidAppear(true)
+    }
+    
+    func fadeChangeBackgroundImage(toImage: UIImage) {
+        UIView.transitionWithView(self.backgroundImageView, duration: 1.5, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
+            self.backgroundImageView.image = toImage
+        }, completion: nil)
     }
     
 }
