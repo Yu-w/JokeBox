@@ -40,7 +40,16 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
                     let imageData = NSData(contentsOfURL: NSURL(string: self.imageUrls[index])!)
                     dispatch_async(dispatch_get_main_queue()) {
                         if imageData != nil {
-                            self.images.append(UIImage(data: imageData!)!)
+                            var hasIdenticalImage: Bool = false
+                            let curImage: UIImage = UIImage(data: imageData!)!
+                            for image in self.images {
+                                if image.size == curImage.size {
+                                    hasIdenticalImage = true
+                                }
+                            }
+                            if hasIdenticalImage == false {
+                                self.images.append(curImage)
+                            }
                         }
                     }
                 }
@@ -51,7 +60,7 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
     
     var currentNumberOfImage: Int = 0 {
         didSet {
-            if currentNumberOfImage >= 50 {
+            if currentNumberOfImage >= 25 {
                 imageGetter.getFlickrInterestingnessPhotos()
                 currentNumberOfImage = 0
                 images.removeAll(keepCapacity: true)
