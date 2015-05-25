@@ -57,13 +57,15 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
         }
     }
     var images = [UIImage]()
-    
-    var currentNumberOfImage: Int = 0 {
+    var jokes = [Joke]()
+    var currentNumber: Int = 0 {
         didSet {
-            if currentNumberOfImage >= 25 {
+            if currentNumber >= 25 {
+                jokeMgr.getManyRandomJoke()
                 imageGetter.getFlickrInterestingnessPhotos()
-                currentNumberOfImage = 0
+                currentNumber = 0
                 images.removeAll(keepCapacity: true)
+                jokeLabelActivityIndicator.startAnimating()
             }
         }
     }
@@ -85,13 +87,21 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
         jokeLabel.text = ""
         jokeLabel.adjustsFontSizeToFitWidth = true
         jokeLabelActivityIndicator.hidesWhenStopped = true
+        jokeLabelActivityIndicator.startAnimating()
+        
+        jokeMgr.getManyRandomJoke()
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(Bool())
-        jokeLabelActivityIndicator.startAnimating()
         jokeLabel.text = ""
-        jokeMgr.getOneRandomJoke()
+        if !jokes.isEmpty {
+            jokeLabel.text = jokes[currentNumber].content
+        }
+        if jokeLabel.text == "" {
+            jokeMgr.getOneRandomJoke()
+
+        }
         
         let scale = CGAffineTransformMakeScale(0.5, 0.5)
         let translate = CGAffineTransformMakeTranslation(0, -200)
@@ -121,9 +131,16 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
     }
 
     func gotOneRandomJoke(joke: Joke) {
-        self.jokeLabel.text = joke.content
-        jokeLabel.animation = "fadeIn"
-        jokeLabel.animate()
+        if jokeLabel.text == "" {
+            self.jokeLabel.text = joke.content
+            jokeLabel.animation = "fadeIn"
+            jokeLabel.animate()
+            jokeLabelActivityIndicator.stopAnimating()
+        }
+    }
+    
+    func gotManyRandomJokes(jokes: [Joke]) {
+        self.jokes = jokes
         jokeLabelActivityIndicator.stopAnimating()
     }
     
@@ -228,7 +245,7 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
     }
     
     func refreshView() {
-        currentNumberOfImage++
+        currentNumber++
         animator.removeAllBehaviors()
         
         snapBehavior = UISnapBehavior(item: dialogView, snapToPoint: CGPoint(x: view.center.x, y: view.center.y - 45))
