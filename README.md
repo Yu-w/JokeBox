@@ -16,4 +16,4 @@ Get API from website listed below:
 * [Internet Chunk Norris Database](http://www.icndb.com/api/)
 
 
-Animation part credit to *@MengTo*
+Animation and UI credit to *@MengTo*
