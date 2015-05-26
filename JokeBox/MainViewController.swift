@@ -26,6 +26,7 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
     @IBOutlet weak var shareButton: DesignableButton!
     @IBOutlet weak var favoriteButton: DesignableButton!
     @IBOutlet weak var jokeLabelActivityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var shareButtonWidthConstraint: NSLayoutConstraint!
     
     var placeHolderImageIndex: Int {
         get {
@@ -84,6 +85,7 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
         insertBlurView(headerView, UIBlurEffectStyle.Dark)
         
         animator = UIDynamicAnimator(referenceView: view)
+        shareButtonWidthConstraint.constant = self.view.frame.width / 3
         
         dialogView.alpha = 0
         imageView.contentMode = UIViewContentMode.ScaleAspectFill
@@ -102,10 +104,10 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
         jokeLabel.text = ""
         if !jokes.isEmpty {
             jokeLabel.text = jokes[currentNumber].content
+
         }
         if jokeLabel.text == "" {
             jokeMgr.getOneRandomJoke()
-
         }
         favoriteButtonIsClicked = false
         

@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiX-Qp-GM2" userLabel="share" customClass="DesignableButton" customModule="Spring">
-                                        <rect key="frame" x="220" y="533" width="125" height="54"/>
+                                        <rect key="frame" x="220" y="513" width="125" height="54"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="125" id="ti9-IU-th2"/>
                                             <constraint firstAttribute="height" constant="54" id="uFj-Xt-Uo4"/>
@@ -57,7 +57,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z4j-80-zgT" userLabel="favorite" customClass="DesignableButton" customModule="Spring">
-                                        <rect key="frame" x="30" y="533" width="125" height="54"/>
+                                        <rect key="frame" x="30" y="513" width="125" height="54"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="54" id="9Z1-88-IoI"/>
                                             <constraint firstAttribute="width" constant="54" id="W5O-YS-dU6"/>
@@ -280,7 +280,7 @@
                                     <constraint firstItem="Ywy-VV-ikv" firstAttribute="top" secondItem="06s-jL-6FA" secondAttribute="top" id="c9O-pJ-oLk"/>
                                     <constraint firstItem="z4j-80-zgT" firstAttribute="width" secondItem="oiX-Qp-GM2" secondAttribute="width" id="dJ0-td-6Gv"/>
                                     <constraint firstItem="z4j-80-zgT" firstAttribute="centerY" secondItem="oiX-Qp-GM2" secondAttribute="centerY" id="dYi-io-iye"/>
-                                    <constraint firstAttribute="bottom" secondItem="oiX-Qp-GM2" secondAttribute="bottom" constant="80" id="fWH-tw-gmJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="oiX-Qp-GM2" secondAttribute="bottom" constant="100" id="fWH-tw-gmJ"/>
                                     <constraint firstAttribute="trailing" secondItem="1aY-4L-AfP" secondAttribute="trailing" id="fYU-Jh-LVu"/>
                                     <constraint firstAttribute="trailing" secondItem="gXj-sg-khc" secondAttribute="trailing" constant="20" id="rOg-MT-bCI"/>
                                     <constraint firstItem="gXj-sg-khc" firstAttribute="top" secondItem="z4j-80-zgT" secondAttribute="bottom" constant="25" id="v9v-FX-kSV"/>
@@ -327,6 +327,7 @@
                         <outlet property="maskButton" destination="Ywy-VV-ikv" id="CSy-fR-5QD"/>
                         <outlet property="panRecognizer" destination="NgP-2a-jHf" id="04L-i7-x7m"/>
                         <outlet property="shareButton" destination="oiX-Qp-GM2" id="2iH-0F-HVI"/>
+                        <outlet property="shareButtonWidthConstraint" destination="ti9-IU-th2" id="coH-Sq-CdG"/>
                         <outlet property="shareLabelsView" destination="NjB-Mx-qug" id="dB3-QE-Pva"/>
                         <outlet property="shareView" destination="1aY-4L-AfP" id="srR-tU-VmJ"/>
                         <outlet property="twitterButton" destination="9K9-yn-fx8" id="cuj-2O-lx4"/>
