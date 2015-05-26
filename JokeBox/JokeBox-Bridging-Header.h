@@ -3,4 +3,3 @@
 //
 
 #import <MWFeedParser/MWFeedParser.h>
-#import <Haneke/Haneke.h>
