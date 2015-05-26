@@ -23,7 +23,8 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
     @IBOutlet weak var twitterButton: UIButton!
     @IBOutlet weak var facebookButton: UIButton!
     @IBOutlet weak var shareLabelsView: UIView!
-    @IBOutlet weak var shareButton: UIView!
+    @IBOutlet weak var shareButton: DesignableButton!
+    @IBOutlet weak var favoriteButton: DesignableButton!
     @IBOutlet weak var jokeLabelActivityIndicator: UIActivityIndicatorView!
     
     var placeHolderImageIndex: Int {
@@ -62,6 +63,15 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
             }
         }
     }
+    var favoriteButtonIsClicked: Bool = false {
+        didSet {
+            if favoriteButtonIsClicked == true {
+                favoriteButton.backgroundColor = UIColor(red: 240, green: 0, blue: 0, alpha: 0.3)
+            } else {
+                favoriteButton.backgroundColor = UIColor.clearColor()
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,6 +107,7 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
             jokeMgr.getOneRandomJoke()
 
         }
+        favoriteButtonIsClicked = false
         
         let scale = CGAffineTransformMakeScale(0.5, 0.5)
         let translate = CGAffineTransformMakeTranslation(0, -200)
@@ -117,6 +128,12 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
         } else {
             setCurrentImageAsRandomImageInPlaceHolder()
         }
+        
+        favoriteButton.animation = "pop"
+        shareButton.animation = "pop"
+        shareButton.delay = 0.1
+        favoriteButton.animate()
+        shareButton.animate()
     }
     
     func setCurrentImageAsRandomImageInPlaceHolder() {
@@ -155,6 +172,10 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
         spring(0.5) {
             self.maskButton.alpha = 1
         }
+    }
+    
+    @IBAction func favoriteButtonDidPress(sender: UIButton) {
+        favoriteButtonIsClicked = !favoriteButtonIsClicked
     }
 
     @IBAction func shareButtonDidPress(sender: AnyObject) {
