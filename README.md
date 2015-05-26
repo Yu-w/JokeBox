@@ -31,9 +31,9 @@ $ open JokeBox.xcworkspace
 # Credits
 * [Alamofire](https://github.com/Alamofire/Alamofire) for network request
 * [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) for handling JSON api
-* [MWFeedParser](https://github.com/mwaterfall/MWFeedParser) for parse HTML to text
+* [MWFeedParser](https://github.com/mwaterfall/MWFeedParser) for parsing HTML
 * [Spring](https://github.com/MengTo/Spring)  for code-less animation
-* Animation and UI: [@MengTo](https://twitter.com/mengto)
+* [@MengTo](https://twitter.com/mengto) for UI
 
 
 
