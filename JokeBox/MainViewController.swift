@@ -8,6 +8,7 @@
 
 import UIKit
 import Spring
+import Social
 
 class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDelegate {
 
@@ -97,6 +98,9 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
         jokeLabelActivityIndicator.startAnimating()
         
         jokeMgr.getManyRandomJoke()
+        
+        facebookButton.addTarget(self, action: "faceBookButtonDidPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+        twitterButton.addTarget(self, action: "twitterButtonDidPressed", forControlEvents: UIControlEvents.TouchUpInside)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -280,4 +284,30 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
         }, completion: nil)
     }
     
+    
+    func faceBookButtonDidPressed(sender: UIButton) {
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
+            var fbShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+            fbShare.setInitialText("\(jokeLabel.text)")
+            self.presentViewController(fbShare, animated: true, completion: nil)
+            
+        } else {
+            var alert = UIAlertController(title: "Accounts", message: "Please login to a Facebook account to share.", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func twitterButtonDidPressed(sender: UIButton) {
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter){
+        var twitterSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+        twitterSheet.setInitialText("\(jokeLabel.text)")
+        self.presentViewController(twitterSheet, animated: true, completion: nil)
+        } else {
+        var alert = UIAlertController(title: "Accounts", message: "Please login to a Twitter account to share.", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+        }
+    }
 }

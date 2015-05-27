@@ -164,33 +164,6 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="share-bg" translatesAutoresizingMaskIntoConstraints="NO" id="1n8-BE-xZJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PcU-Y9-mmn">
-                                                <rect key="frame" x="40" y="68" width="90" height="90"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="PcU-Y9-mmn" secondAttribute="height" multiplier="1:1" id="2x5-bE-mzY"/>
-                                                </constraints>
-                                                <state key="normal" backgroundImage="share-email">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9K9-yn-fx8">
-                                                <rect key="frame" x="142" y="68" width="90" height="90"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="9K9-yn-fx8" secondAttribute="height" multiplier="1:1" id="Kw1-Mo-gzE"/>
-                                                </constraints>
-                                                <state key="normal" backgroundImage="share-twitter">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DE4-ay-OrN">
-                                                <rect key="frame" x="245" y="68" width="90" height="90"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="DE4-ay-OrN" secondAttribute="height" multiplier="1:1" id="1B8-gb-vZw"/>
-                                                </constraints>
-                                                <state key="normal" backgroundImage="share-facebook">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                            </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NjB-Mx-qug">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                                 <subviews>
@@ -238,6 +211,33 @@
                                                     </mask>
                                                 </variation>
                                             </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PcU-Y9-mmn">
+                                                <rect key="frame" x="40" y="68" width="90" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="PcU-Y9-mmn" secondAttribute="height" multiplier="1:1" id="2x5-bE-mzY"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="share-email">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9K9-yn-fx8">
+                                                <rect key="frame" x="142" y="68" width="90" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="9K9-yn-fx8" secondAttribute="height" multiplier="1:1" id="Kw1-Mo-gzE"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="share-twitter">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DE4-ay-OrN">
+                                                <rect key="frame" x="245" y="68" width="90" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="DE4-ay-OrN" secondAttribute="height" multiplier="1:1" id="1B8-gb-vZw"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="share-facebook">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
