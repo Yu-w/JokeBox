@@ -5,6 +5,8 @@ Simple iOS App for viewing daily jokes, written in Swift.
 
 This open sourced project is mainly made for practicing connecting apis and ui animations.
 
+![Main View](ScreenShots/MainView.png) ![Share View](ScreenShots/ShareView.png)
+
 # Usage
 1) Download the repository
 ```
