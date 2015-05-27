@@ -17,7 +17,6 @@
 		889E21B71B11EEE30069552C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 889E21B51B11EEE30069552C /* LaunchScreen.xib */; };
 		889E21C31B11EEE30069552C /* JokeBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889E21C21B11EEE30069552C /* JokeBoxTests.swift */; };
 		889E21CD1B11FA190069552C /* JokeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889E21CC1B11FA190069552C /* JokeManager.swift */; };
-		B5BC92921B14E24A0084CEAB /* Favor.png in Resources */ = {isa = PBXBuildFile; fileRef = B5BC92911B14E24A0084CEAB /* Favor.png */; };
 		B5C483E21B14E4F6003B5430 /* bkgd.png in Resources */ = {isa = PBXBuildFile; fileRef = B5C483E11B14E4F6003B5430 /* bkgd.png */; };
 		EE69AFFA480DDEEEAB06A193 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D01DB2C9D061576840126FB5 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -50,7 +49,6 @@
 		889E21C11B11EEE30069552C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		889E21C21B11EEE30069552C /* JokeBoxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeBoxTests.swift; sourceTree = "<group>"; };
 		889E21CC1B11FA190069552C /* JokeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokeManager.swift; sourceTree = "<group>"; };
-		B5BC92911B14E24A0084CEAB /* Favor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Favor.png; sourceTree = "<group>"; };
 		B5C483E11B14E4F6003B5430 /* bkgd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bkgd.png; sourceTree = "<group>"; };
 		D01DB2C9D061576840126FB5 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -113,7 +111,6 @@
 				889E21B31B11EEE30069552C /* Images.xcassets */,
 				889E21B51B11EEE30069552C /* LaunchScreen.xib */,
 				B5C483E11B14E4F6003B5430 /* bkgd.png */,
-				B5BC92911B14E24A0084CEAB /* Favor.png */,
 				8832024E1B136BAB00906208 /* favorite.png */,
 				8832024C1B136B8F00906208 /* share.png */,
 				889E21AB1B11EEE30069552C /* Info.plist */,
@@ -243,7 +240,6 @@
 				8832024D1B136B8F00906208 /* share.png in Resources */,
 				8832024F1B136BAB00906208 /* favorite.png in Resources */,
 				889E21B41B11EEE30069552C /* Images.xcassets in Resources */,
-				B5BC92921B14E24A0084CEAB /* Favor.png in Resources */,
 				888A967A1B12E63D005297E1 /* Main.storyboard in Resources */,
 				B5C483E21B14E4F6003B5430 /* bkgd.png in Resources */,
 			);
