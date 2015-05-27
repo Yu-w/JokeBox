@@ -100,7 +100,7 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
         jokeMgr.getManyRandomJoke()
         
         facebookButton.addTarget(self, action: "faceBookButtonDidPressed:", forControlEvents: UIControlEvents.TouchUpInside)
-        twitterButton.addTarget(self, action: "twitterButtonDidPressed", forControlEvents: UIControlEvents.TouchUpInside)
+        twitterButton.addTarget(self, action: "twitterButtonDidPressed:", forControlEvents: UIControlEvents.TouchUpInside)
     }
     
     override func viewDidAppear(animated: Bool) {
