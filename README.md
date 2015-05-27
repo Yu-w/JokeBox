@@ -1,11 +1,12 @@
 # Joke Box
 #### Your daily funny joke of the day. Take your time for relaxing and having fun!
 
-Simple iOS App for viewing daily jokes, written in Swift.
+Simple iOS App for viewing daily jokes, written purely in Swift.
 
-This open sourced project is mainly made for practicing connecting apis and ui animations.
+This open sourced project is mainly built for practicing APIs connecting and ui animations.
 
-![Main View](ScreenShots/MainView.png) ![Share View](ScreenShots/ShareView.png)
+<img src="./ScreenShots/MainView.png" width="375" height="667"/>
+<img src="./ScreenShots/ShareView.png" width="375" height="667"/>
 
 # Usage
 1) Download the repository
@@ -35,7 +36,7 @@ $ open JokeBox.xcworkspace
 * [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) for handling JSON api
 * [MWFeedParser](https://github.com/mwaterfall/MWFeedParser) for parsing HTML
 * [Spring](https://github.com/MengTo/Spring)  for code-less animation
-* [@MengTo](https://twitter.com/mengto) for UI
+* [@MengTo](https://twitter.com/mengto) for UI Reference
 
 
 
