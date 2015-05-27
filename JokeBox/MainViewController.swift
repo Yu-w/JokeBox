@@ -9,8 +9,9 @@
 import UIKit
 import Spring
 import Social
+import MessageUI
 
-class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDelegate {
+class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDelegate, MFMailComposeViewControllerDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var backgroundImageView: UIImageView!
@@ -101,6 +102,7 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
         
         facebookButton.addTarget(self, action: "faceBookButtonDidPressed:", forControlEvents: UIControlEvents.TouchUpInside)
         twitterButton.addTarget(self, action: "twitterButtonDidPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+        emailButton.addTarget(self, action: "emailButtonDidPressed:", forControlEvents: UIControlEvents.TouchUpInside)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -288,7 +290,7 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
     func faceBookButtonDidPressed(sender: UIButton) {
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
             var fbShare:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
-            fbShare.setInitialText("\(jokeLabel.text)")
+            fbShare.setInitialText("\(jokeLabel.text!)")
             self.presentViewController(fbShare, animated: true, completion: nil)
             
         } else {
@@ -301,13 +303,42 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
     
     func twitterButtonDidPressed(sender: UIButton) {
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter){
-        var twitterSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-        twitterSheet.setInitialText("\(jokeLabel.text)")
-        self.presentViewController(twitterSheet, animated: true, completion: nil)
+            var twitterSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+            twitterSheet.setInitialText("\(jokeLabel.text!)")
+            self.presentViewController(twitterSheet, animated: true, completion: nil)
         } else {
-        var alert = UIAlertController(title: "Accounts", message: "Please login to a Twitter account to share.", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-        self.presentViewController(alert, animated: true, completion: nil)
+            var alert = UIAlertController(title: "Accounts", message: "Please login to a Twitter account to share.", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
         }
+    }
+    
+    func emailButtonDidPressed(sender: UIButton) {
+        let mailComposeViewController = configuredMailComposeViewController()
+        if MFMailComposeViewController.canSendMail() {
+            self.presentViewController(mailComposeViewController, animated: true, completion: nil)
+        } else {
+            self.showSendMailErrorAlert()
+        }
+    }
+    
+    func configuredMailComposeViewController() -> MFMailComposeViewController {
+        let mailComposerVC = MFMailComposeViewController()
+        mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
+        
+        mailComposerVC.setSubject("Check this out. Such funny joke!")
+        mailComposerVC.setMessageBody("\(jokeLabel.text!)", isHTML: false)
+        
+        return mailComposerVC
+    }
+    
+    func showSendMailErrorAlert() {
+        let sendMailErrorAlert = UIAlertView(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", delegate: self, cancelButtonTitle: "OK")
+        sendMailErrorAlert.show()
+    }
+    
+    // MARK: MFMailComposeViewControllerDelegate Method
+    func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
+        controller.dismissViewControllerAnimated(true, completion: nil)
     }
 }
