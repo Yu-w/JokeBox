@@ -24,8 +24,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiX-Qp-GM2" userLabel="share" customClass="DesignableButton" customModule="Spring">
-                                        <rect key="frame" x="186.5" y="513" width="143.5" height="54"/>
+                                        <rect key="frame" x="187" y="515" width="140" height="54"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" constant="140" id="GEm-zH-jGZ"/>
                                             <constraint firstAttribute="width" constant="125" id="ti9-IU-th2"/>
                                             <constraint firstAttribute="height" constant="54" id="uFj-Xt-Uo4"/>
                                         </constraints>
@@ -61,7 +62,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z4j-80-zgT" userLabel="favorite" customClass="DesignableButton" customModule="Spring">
-                                        <rect key="frame" x="45" y="513" width="143.5" height="54"/>
+                                        <rect key="frame" x="49" y="515" width="140" height="54"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="54" id="9Z1-88-IoI"/>
                                             <constraint firstAttribute="width" constant="54" id="W5O-YS-dU6"/>
@@ -170,7 +171,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                                 <subviews>
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="znp-2e-MdF">
-                                                        <rect key="frame" x="156.5" y="20" width="63" height="33"/>
+                                                        <rect key="frame" x="156" y="20" width="63" height="33"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
                                                         <color key="textColor" red="0.65490196079999996" green="0.67450980390000004" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -268,6 +269,7 @@
                                 <constraints>
                                     <constraint firstItem="gXj-sg-khc" firstAttribute="top" secondItem="oiX-Qp-GM2" secondAttribute="bottom" constant="25" id="26A-je-Phb"/>
                                     <constraint firstItem="z4j-80-zgT" firstAttribute="width" secondItem="oiX-Qp-GM2" secondAttribute="height" multiplier="1:1" id="3JE-FO-4NG"/>
+                                    <constraint firstAttribute="centerX" secondItem="oiX-Qp-GM2" secondAttribute="centerX" constant="-70" id="8Zk-hn-kAO"/>
                                     <constraint firstItem="oiX-Qp-GM2" firstAttribute="leading" secondItem="z4j-80-zgT" secondAttribute="trailing" constant="-2" id="9JH-Jm-chP"/>
                                     <constraint firstItem="z4j-80-zgT" firstAttribute="leading" secondItem="06s-jL-6FA" secondAttribute="leading" constant="45" id="A89-W4-XVo"/>
                                     <constraint firstAttribute="trailing" secondItem="oiX-Qp-GM2" secondAttribute="trailing" constant="45" id="Ab8-9U-xh4"/>
@@ -285,6 +287,7 @@
                                     <constraint firstItem="z4j-80-zgT" firstAttribute="centerY" secondItem="oiX-Qp-GM2" secondAttribute="centerY" id="dYi-io-iye"/>
                                     <constraint firstAttribute="bottom" secondItem="oiX-Qp-GM2" secondAttribute="bottom" constant="100" id="fWH-tw-gmJ"/>
                                     <constraint firstAttribute="trailing" secondItem="1aY-4L-AfP" secondAttribute="trailing" id="fYU-Jh-LVu"/>
+                                    <constraint firstItem="oiX-Qp-GM2" firstAttribute="top" secondItem="gXj-sg-khc" secondAttribute="bottom" constant="65" id="gku-hd-OYL"/>
                                     <constraint firstAttribute="trailing" secondItem="gXj-sg-khc" secondAttribute="trailing" constant="20" id="rOg-MT-bCI"/>
                                     <constraint firstItem="gXj-sg-khc" firstAttribute="top" secondItem="z4j-80-zgT" secondAttribute="bottom" constant="25" id="v9v-FX-kSV"/>
                                     <constraint firstAttribute="centerY" secondItem="gXj-sg-khc" secondAttribute="centerY" constant="45" id="vN6-xe-vud"/>
@@ -296,8 +299,11 @@
                                         <exclude reference="HL3-fe-m1d"/>
                                         <exclude reference="v9v-FX-kSV"/>
                                         <exclude reference="3JE-FO-4NG"/>
+                                        <exclude reference="A89-W4-XVo"/>
                                         <exclude reference="aS3-IV-qE7"/>
+                                        <exclude reference="Ab8-9U-xh4"/>
                                         <exclude reference="B1F-fr-dcQ"/>
+                                        <exclude reference="fWH-tw-gmJ"/>
                                     </mask>
                                 </variation>
                             </view>

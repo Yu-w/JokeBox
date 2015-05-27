@@ -19,8 +19,8 @@
                             <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bkgd" translatesAutoresizingMaskIntoConstraints="NO" id="zbx-3f-mTx">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Joke Box" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
-                                <rect key="frame" x="19" y="259" width="336" height="55"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Joke Box" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
+                                <rect key="frame" x="91.5" y="240.5" width="191.5" height="66"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="48"/>
                                 <color key="textColor" red="1" green="0.98127087229999999" blue="0.96161930250000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -28,9 +28,11 @@
                             </label>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="centerY" secondItem="kId-c2-rCX" secondAttribute="centerY" constant="60" id="E93-Ed-MYV"/>
                             <constraint firstItem="zbx-3f-mTx" firstAttribute="leading" secondItem="fMp-wG-goB" secondAttribute="leading" id="ITD-jY-qOa"/>
                             <constraint firstAttribute="bottom" secondItem="zbx-3f-mTx" secondAttribute="bottom" id="SlG-sR-ok7"/>
                             <constraint firstAttribute="trailing" secondItem="zbx-3f-mTx" secondAttribute="trailing" id="VGr-Ud-bKm"/>
+                            <constraint firstAttribute="centerX" secondItem="kId-c2-rCX" secondAttribute="centerX" id="ePr-va-T2x"/>
                             <constraint firstItem="zbx-3f-mTx" firstAttribute="top" secondItem="fMp-wG-goB" secondAttribute="top" id="oeL-Y5-Twj"/>
                         </constraints>
                     </view>
