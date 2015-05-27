@@ -69,9 +69,9 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
     var favoriteButtonIsClicked: Bool = false {
         didSet {
             if favoriteButtonIsClicked == true {
-                favoriteButton.backgroundColor = UIColor(red: 240, green: 0, blue: 0, alpha: 0.3)
+                favoriteButton.setImage(UIImage(named: "leftButton-selected"), forState: UIControlState.Normal)
             } else {
-                favoriteButton.backgroundColor = UIColor.clearColor()
+                favoriteButton.setImage(UIImage(named: "leftButton"), forState: UIControlState.Normal)
             }
         }
     }

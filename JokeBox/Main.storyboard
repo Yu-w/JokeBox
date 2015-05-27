@@ -24,14 +24,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiX-Qp-GM2" userLabel="share" customClass="DesignableButton" customModule="Spring">
-                                        <rect key="frame" x="220" y="513" width="125" height="54"/>
+                                        <rect key="frame" x="186.5" y="513" width="143.5" height="54"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="125" id="ti9-IU-th2"/>
                                             <constraint firstAttribute="height" constant="54" id="uFj-Xt-Uo4"/>
                                         </constraints>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
-                                        <state key="normal" image="upload"/>
+                                        <state key="normal" image="rightButton"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="22"/>
@@ -42,30 +41,33 @@
                                                 <real key="value" value="0.25"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="27"/>
+                                                <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
+                                                <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                 <color key="value" red="1" green="0.98127087229999999" blue="0.96161930250000005" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="ti9-IU-th2"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="shareButtonDidPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="g7C-2I-l52"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z4j-80-zgT" userLabel="favorite" customClass="DesignableButton" customModule="Spring">
-                                        <rect key="frame" x="30" y="513" width="125" height="54"/>
+                                        <rect key="frame" x="45" y="513" width="143.5" height="54"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="54" id="9Z1-88-IoI"/>
                                             <constraint firstAttribute="width" constant="54" id="W5O-YS-dU6"/>
                                         </constraints>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" image="like"/>
+                                        <state key="normal" image="leftButton"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="22"/>
@@ -76,13 +78,13 @@
                                                 <real key="value" value="0.20000000000000001"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="27"/>
+                                                <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                 <color key="value" red="1" green="0.98127087229999999" blue="0.96161930250000005" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
+                                                <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="YES"/>
                                         </userDefinedRuntimeAttributes>
@@ -266,8 +268,9 @@
                                 <constraints>
                                     <constraint firstItem="gXj-sg-khc" firstAttribute="top" secondItem="oiX-Qp-GM2" secondAttribute="bottom" constant="25" id="26A-je-Phb"/>
                                     <constraint firstItem="z4j-80-zgT" firstAttribute="width" secondItem="oiX-Qp-GM2" secondAttribute="height" multiplier="1:1" id="3JE-FO-4NG"/>
-                                    <constraint firstItem="z4j-80-zgT" firstAttribute="leading" secondItem="06s-jL-6FA" secondAttribute="leading" constant="30" id="A89-W4-XVo"/>
-                                    <constraint firstAttribute="trailing" secondItem="oiX-Qp-GM2" secondAttribute="trailing" constant="30" id="Ab8-9U-xh4"/>
+                                    <constraint firstItem="oiX-Qp-GM2" firstAttribute="leading" secondItem="z4j-80-zgT" secondAttribute="trailing" constant="-2" id="9JH-Jm-chP"/>
+                                    <constraint firstItem="z4j-80-zgT" firstAttribute="leading" secondItem="06s-jL-6FA" secondAttribute="leading" constant="45" id="A89-W4-XVo"/>
+                                    <constraint firstAttribute="trailing" secondItem="oiX-Qp-GM2" secondAttribute="trailing" constant="45" id="Ab8-9U-xh4"/>
                                     <constraint firstItem="oiX-Qp-GM2" firstAttribute="leading" secondItem="z4j-80-zgT" secondAttribute="trailing" constant="20" id="B1F-fr-dcQ"/>
                                     <constraint firstAttribute="bottom" secondItem="1aY-4L-AfP" secondAttribute="bottom" id="DXB-5Q-NSh"/>
                                     <constraint firstAttribute="centerX" secondItem="gXj-sg-khc" secondAttribute="centerX" constant="27.5" id="HL3-fe-m1d"/>
@@ -344,13 +347,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="like" width="24" height="22"/>
+        <image name="leftButton" width="254" height="112"/>
         <image name="onBoardingImage" width="375" height="667"/>
         <image name="placeHoldImage6" width="2560" height="1600"/>
+        <image name="rightButton" width="254" height="112"/>
         <image name="share-bg" width="160" height="100"/>
         <image name="share-email" width="90" height="90"/>
         <image name="share-facebook" width="90" height="90"/>
         <image name="share-twitter" width="90" height="90"/>
-        <image name="upload" width="19" height="27"/>
     </resources>
 </document>

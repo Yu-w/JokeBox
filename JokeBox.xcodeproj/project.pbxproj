@@ -7,17 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8832024D1B136B8F00906208 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 8832024C1B136B8F00906208 /* share.png */; };
-		8832024F1B136BAB00906208 /* favorite.png in Resources */ = {isa = PBXBuildFile; fileRef = 8832024E1B136BAB00906208 /* favorite.png */; };
 		888A96781B12CA80005297E1 /* ImageGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888A96771B12CA80005297E1 /* ImageGetter.swift */; };
 		888A967A1B12E63D005297E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 888A96791B12E63D005297E1 /* Main.storyboard */; };
 		888FFA121B1555DB00EEECD9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888FFA111B1555DB00EEECD9 /* MainViewController.swift */; };
+		888FFA141B15CBAA00EEECD9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 888FFA131B15CBAA00EEECD9 /* Images.xcassets */; };
 		889E21AD1B11EEE30069552C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889E21AC1B11EEE30069552C /* AppDelegate.swift */; };
-		889E21B41B11EEE30069552C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 889E21B31B11EEE30069552C /* Images.xcassets */; };
 		889E21B71B11EEE30069552C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 889E21B51B11EEE30069552C /* LaunchScreen.xib */; };
 		889E21C31B11EEE30069552C /* JokeBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889E21C21B11EEE30069552C /* JokeBoxTests.swift */; };
 		889E21CD1B11FA190069552C /* JokeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889E21CC1B11FA190069552C /* JokeManager.swift */; };
-		B5C483E21B14E4F6003B5430 /* bkgd.png in Resources */ = {isa = PBXBuildFile; fileRef = B5C483E11B14E4F6003B5430 /* bkgd.png */; };
 		EE69AFFA480DDEEEAB06A193 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D01DB2C9D061576840126FB5 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -34,22 +31,19 @@
 /* Begin PBXFileReference section */
 		4A6D9AEDB12B4BA9981F0591 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		578416305A53ED9F828B63CA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		8832024C1B136B8F00906208 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
-		8832024E1B136BAB00906208 /* favorite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorite.png; sourceTree = "<group>"; };
 		888A96721B120508005297E1 /* JokeBox-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JokeBox-Bridging-Header.h"; sourceTree = "<group>"; };
 		888A96771B12CA80005297E1 /* ImageGetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGetter.swift; sourceTree = "<group>"; };
 		888A96791B12E63D005297E1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		888FFA111B1555DB00EEECD9 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		888FFA131B15CBAA00EEECD9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		889E21A71B11EEE30069552C /* JokeBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JokeBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		889E21AB1B11EEE30069552C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		889E21AC1B11EEE30069552C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		889E21B31B11EEE30069552C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		889E21B61B11EEE30069552C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		889E21BC1B11EEE30069552C /* JokeBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JokeBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		889E21C11B11EEE30069552C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		889E21C21B11EEE30069552C /* JokeBoxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeBoxTests.swift; sourceTree = "<group>"; };
 		889E21CC1B11FA190069552C /* JokeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokeManager.swift; sourceTree = "<group>"; };
-		B5C483E11B14E4F6003B5430 /* bkgd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bkgd.png; sourceTree = "<group>"; };
 		D01DB2C9D061576840126FB5 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -108,11 +102,8 @@
 		889E21AA1B11EEE30069552C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				889E21B31B11EEE30069552C /* Images.xcassets */,
 				889E21B51B11EEE30069552C /* LaunchScreen.xib */,
-				B5C483E11B14E4F6003B5430 /* bkgd.png */,
-				8832024E1B136BAB00906208 /* favorite.png */,
-				8832024C1B136B8F00906208 /* share.png */,
+				888FFA131B15CBAA00EEECD9 /* Images.xcassets */,
 				889E21AB1B11EEE30069552C /* Info.plist */,
 				888A96721B120508005297E1 /* JokeBox-Bridging-Header.h */,
 			);
@@ -237,11 +228,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				889E21B71B11EEE30069552C /* LaunchScreen.xib in Resources */,
-				8832024D1B136B8F00906208 /* share.png in Resources */,
-				8832024F1B136BAB00906208 /* favorite.png in Resources */,
-				889E21B41B11EEE30069552C /* Images.xcassets in Resources */,
+				888FFA141B15CBAA00EEECD9 /* Images.xcassets in Resources */,
 				888A967A1B12E63D005297E1 /* Main.storyboard in Resources */,
-				B5C483E21B14E4F6003B5430 /* bkgd.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
