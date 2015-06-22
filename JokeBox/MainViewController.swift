@@ -83,9 +83,6 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
         imageGetter.delegate = self
         imageGetter.getFlickrInterestingnessPhotos()
         
-        insertBlurView(backgroundMaskView, UIBlurEffectStyle.Dark)
-        insertBlurView(headerView, UIBlurEffectStyle.Dark)
-        
         animator = UIDynamicAnimator(referenceView: view)
         shareButtonWidthConstraint.constant = self.view.frame.width / 3
         
@@ -107,6 +104,9 @@ class MainViewController: UIViewController, JokeManagerDelegate, ImageGetterDele
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(Bool())
+        insertBlurView(backgroundMaskView, UIBlurEffectStyle.Dark)
+        insertBlurView(headerView, UIBlurEffectStyle.Dark)
+        
         jokeLabel.text = ""
         if !jokes.isEmpty {
             jokeLabel.text = jokes[currentNumber].content
